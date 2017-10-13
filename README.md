@@ -39,7 +39,10 @@ This website is our first project for C# course. This site is for creating and a
 
 ## Known Bugs
 
-* N/A
+* Gets to http://localhost:5000; yet once clicking on "Add new Contact", the message back from the browser is "./contacts" not found. Yet, if refreshing the page, it displays the form to add a new contact.
+* If entering the contact information and clicking "Save", it takes you to a blank page.
+* If running in Windows 10 and within Git Bash, the "dotnet build" and "dotnet run" commands fail indicating certain files are already running or unable to bind...
+* Solution is to do a netstat -ano | findstr 5000 and to taskkill the PID associated with port 5000. I am not confident that all related sub-processes are killed as well since this project at the current status experiences intermittent success and failure.
 
 ## Support and contact details
 
