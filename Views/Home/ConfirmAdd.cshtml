@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+  <h1>Congratulations for creating a new Contact!</h1>
+  <h2>@Model.GetLastName()</h2>
+  <h2>@Model.GetFirstName()</h2>
+  <h2>@Model.GetPhoneNumber()</h2>
+  <h2>@Model.GetAddress()</h2>
+
+
+  <a href="/contacts/new">Add Another Contact</a>
+  <a href="/">View all Contacts</a>

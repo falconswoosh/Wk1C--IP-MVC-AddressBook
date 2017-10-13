@@ -22,6 +22,11 @@ namespace AddressBook.Controllers
     {
       return View();
     }
+    [HttpGet("/contacts/new")]
+    public ActionResult ConfirmAdd()
+    {
+      return View();
+    }
     [HttpGet("/contacts/{id}")]
     public ActionResult ContactDetail(int id)
     {
