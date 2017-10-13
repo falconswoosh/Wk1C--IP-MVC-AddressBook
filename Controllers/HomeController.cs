@@ -20,7 +20,7 @@ namespace AddressBook.Controllers
     [HttpGet("/contacts/new")]
     public ActionResult AddContacts()
     {
-      return View();
+      return Redirect("ConfirmAdd");
     }
     [HttpGet("/contacts/new")]
     public ActionResult ConfirmAdd()
