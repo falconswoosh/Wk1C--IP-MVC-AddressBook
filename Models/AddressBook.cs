@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 namespace AddressBook.Models
@@ -7,17 +6,17 @@ namespace AddressBook.Models
   {
     private string _lastName;
     private string _firstName;
-    private int _phoneNumber;
+    private string _phoneNumber;
     private string _address;
     private int _id;
-    private static List<Contact> _contactsList = new List<Contact> {};
+    private static List<Contacts> _contactsList = new List<Contacts> {};
 
-    public Contact (string _lastName, string _firstName, int _phoneNumber, string _address)
+    public Contacts (string lastName, string firstName, string phoneNumber, string address)
     {
-      _lastName = LastName;
-      _firstName = FirstName;
-      _phoneNumber = PhoneNumber;
-      _address = Address;
+      _lastName = lastName;
+      _firstName = firstName;
+      _phoneNumber = phoneNumber;
+      _address = address;
       _contactsList.Add(this);
       _id = _contactsList.Count;
     }
@@ -38,27 +37,27 @@ namespace AddressBook.Models
       return _address;
     }
 
-    public void SetLastName(string newGetLastName)
+    public void SetLastName(string newLastName)
     {
-      _companyName = newCompanyName;
+        _lastName = newLastName;
     }
     public void SetFirstName(string newFirstName)
     {
-      _jobTitle = newJobTitle;
+        _firstName = newFirstName;
     }
     public void SetPhoneNumber(string newPhoneNumber)
     {
-      _jobStart = newJobStart;
+        _phoneNumber = newPhoneNumber;
     }
     public void SetAddress(string newAddress)
     {
-      _jobEnd = newJobEnd;
+      _address = newAddress;
     }
     public int GetId()
     {
       return _id;
     }
-    public static List<Contact> GetAll()
+    public static List<Contacts> GetAll()
     {
       return _contactsList;
     }
@@ -66,7 +65,7 @@ namespace AddressBook.Models
     {
       _contactsList.Clear();
     }
-    public static Contact Find(int searchId)
+    public static Contacts Find(int searchId)
     {
       return _contactsList[searchId-1];
     }
