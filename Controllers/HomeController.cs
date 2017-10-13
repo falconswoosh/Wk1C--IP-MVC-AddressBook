@@ -22,7 +22,7 @@ namespace AddressBook.Controllers
     {
       return Redirect("ConfirmAdd");
     }
-    [HttpGet("/contacts/new")]
+    [HttpGet("/contacts/confirm")]
     public ActionResult ConfirmAdd()
     {
       return View();
@@ -34,7 +34,7 @@ namespace AddressBook.Controllers
       return View(contact);
     }
 
-    [HttpPost("/contacts")]
+    [HttpPost("/contacts/contactDetail")]
     public ActionResult ContactDetail()
     {
       Contacts contact = new Contacts(Request.Form["firstName"], Request.Form["lastName"], Request.Form["phoneNumber"], Request.Form["address"]);
