@@ -1,12 +1,12 @@
 # MVC-Address Book
 
-#### This is for code Project#1 for C#
+#### This is for code Project#1 for C Sharp Course
 
 #### By **Alan Falcon**
 
 ## Description
 
-This website is our first project for C# course. This site is for creating a contacts list and managing your contacts list. The list is saved to your local host and is automatically cleared once shutting down the dotnet server.
+This website is our first project for C# course. This site is for creating and allowing you to manage a contacts list. The list is saved to your local host and is automatically cleared once shutting down the dotnet server.
 
 ## Setup/Installation Requirements
 
@@ -52,18 +52,19 @@ Alan Falcon email: [falconswoosh@gmail.com](falconswoosh@gmail.com)
   * [For MAC users](https://download.microsoft.com/download/F/4/F/F4FCB6EC-5F05-4DF8-822C-FF013DF1B17F/dotnet-dev-osx-x64.1.1.4.pkg)
 * [.NET Runtime](https://download.microsoft.com/download/6/F/B/6FB4F9D2-699B-4A40-A674-B7FF41E0E4D2/dotnet-win-x64.1.1.4.exe)
   * [For MAC users](https://download.microsoft.com/download/6/F/B/6FB4F9D2-699B-4A40-A674-B7FF41E0E4D2/dotnet-osx-x64.1.1.4.pkg)
+* [Atom](http://flight-manual.atom.io/getting-started/sections/why-atom/)
 * [CSS: Bootstrap](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjswubPlLnWAhVGVRQKHaRLBkgQFggmMAA&url=https%3A%2F%2Fgetbootstrap.com%2Fcss%2F&usg=AFQjCNFpcAPIPLCu0F7w2NDTOafHdV8Pkw)
 * [CSS: Materialize](http://materializecss.com/forms.html)
 * [Git](https://git-for-windows.github.io/)
   * [For MAC users](https://git-for-windows.github.io/)
-* [GitHub](https://github.com/), [Atom](http://flight-manual.atom.io/getting-started/sections/why-atom/)
+* [GitHub](https://github.com/),
 * [HTML](http://htmlreference.io/)
 * [Javascript](https://github.com/falconswoosh/intrWk2-tracksuggester)
 * [Javascript Jquery](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwiBj_WJlbnWAhWBLhQKHfHUAQEQFggmMAA&url=https%3A%2F%2Fjquery.com%2F&usg=AFQjCNFnz7C6MAXGLm7pVcOD_LrOjJUUiA)
 * [Markdown](https://en.wikipedia.org/wiki/Markdown)
 * [Mono for Windows](http://www.mono-project.com/download/#download-win)
   *  [For MAC users]:
-    *  [Paste the following into your Terminal]:
+    *  [Paste the following into Bash]:
         *  $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
         *  $ echo 'export PATH=/usr/local/bin:$PATH' >> ~/.bash_profile
         *  $ brew install git              

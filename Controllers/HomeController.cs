@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace NewProject.Controllers
+namespace AddressBook.Controllers
 {
     public class HomeController : Controller
     {

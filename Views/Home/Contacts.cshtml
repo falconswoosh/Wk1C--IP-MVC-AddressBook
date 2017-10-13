@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+<h1>Contacts List</h1>
+<ul>
+  @foreach (var job in Model)
+  {
+    <li><a href='/contacts/@contact.GetId()'>@contact.GetFullName()</a></li>
+  }
+</ul>
+<a href ="/contacts/new">Add new Contact</a>
+<a href="/">Return to Homepage</a>
