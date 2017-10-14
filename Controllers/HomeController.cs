@@ -18,22 +18,22 @@ namespace AddressBook.Controllers
       return View(allContacts);
     }
     [HttpGet("/contacts/new")]
-    public ActionResult AddContacts()
+    public ActionResult AddContactsForm()
     {
         return View();
+    }
+    [HttpPost("/contacts/new")]
+    public ActionResult ConfirmAdd()
+    {
+      Contacts contact = new Contacts(Request.Form["firstName"], Request.Form["lastName"], Request.Form["phoneNumber"], Request.Form["address"]);
+      return View("ConfirmAdd");
+      // return View();
     }
     [HttpGet("/contacts/{id}")]
     public ActionResult ContactDetail(int id)
     {
       Contacts contact = Contacts.Find(id);
       return View(contact);
-    }
-
-    [HttpPost("/contacts/detail")]
-    public ActionResult ContactDetail()
-    {
-      Contacts contact = new Contacts(Request.Form["firstName"], Request.Form["lastName"], Request.Form["phoneNumber"], Request.Form["address"]);
-      return View("AddContacts");
     }
   }
 }

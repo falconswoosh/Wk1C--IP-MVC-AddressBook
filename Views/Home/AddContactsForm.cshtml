@@ -3,7 +3,7 @@
 }
 <h3>Add a New Contact:</h3>
 <div class="container">
-  <form action="/contacts" method="post">
+  <form action="/contacts/new" method="post">
     <div class="form-group">
       <label for="firstName">First Name:</label>
       <input class="form-control" id="firstName" type="text" name="firstName">
@@ -21,8 +21,8 @@
       <input class="form-control" id="address" type="text" name="address">
     </div>
     <div class="form-group">
-    <button type="submit" class="btn-lg btn-warning">Save</button>
+    <button id="save" type="submit" class="btn-lg btn-warning">Save</button>
     </div>
   </form>
-  <a href="/">Return to Homepage</a>
+  <a href="http://localhost:5000">Return to Homepage</a>
 </div>
