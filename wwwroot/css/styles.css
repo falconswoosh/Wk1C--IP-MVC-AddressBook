@@ -5,11 +5,20 @@ div#footer {
     width:100%;
     color:#CCC;
     background:#333;
-    padding:8px;
+    padding:1px;
 }
 h3 {
   color: blue;
 }
 #Header {
   font-weight: 600;
+}
+.footerDiv {
+  font-size: 18px;
+}
+#Header {
+  background-color: cyan;
+}
+.listOut {
+  font-size: 16px;
 }

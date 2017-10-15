@@ -8,11 +8,8 @@
 <ul>
   @foreach (var contact in Model)
   {
-    <li><a href='/contacts/@contact.GetId()'>@contact.GetLastName(), @contact.GetFirstName()</a></li>
+    <li class="listOut"><a href='/contacts/@contact.GetId()'>@contact.GetLastName(), @contact.GetFirstName()</a></li>
   }
 </ul>
 
 </div>
-  <a href="/contacts/new">Add Another Contact</a>
-  <a href="/contacts">View all Contacts</a>
-  <a href="/contacts/clear">Clear All Contacts</a>

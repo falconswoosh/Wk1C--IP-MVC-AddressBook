@@ -38,10 +38,9 @@ namespace AddressBook.Controllers
       return View(contact);
     }
     [HttpGet("/contacts/clear")]
-    public ActionResult ClearContact()
+    public ActionResult ClearContacts()
     {
-      ClearAll();
-      return View("/");
+      return View();
     }
   }
 }

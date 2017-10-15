@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+<h1 id="clearContacts">*Clear Contacts List*</h1>
+<input type=text id="warning"><span>WARNING: You are about to clear all your contacts. Are certain this is what you wish to do (Y/N)?"</span>
+
+@if ('#warning' != "N" ||'#warning' != "n"  ) {
+  Contacts.Clear();
+} Else {
+<p>Returning you to the Homepage...</p>
+  System.Threading.Thread.Sleep(3000);
+}
