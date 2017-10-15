@@ -6,17 +6,23 @@ $(function() {
   var lNameInput = $("input#lastName").val();
   var phoneNumberInput = $("input#phoneNumber").val();
   var addressInput = $("input#address").val();
-  document.body.innerHTML = '';
-  $("body").append("@{");
-  $("body").append("Layout = '_Layout';");
-  $("body").append("}");
+  // document.body.innerHTML = '';
+  // $("body").append("@{");
+  // $("body").append("Layout = '_Layout';");
+  // $("body").append("}");
+  $("div.container").slideUp();
   $("body").append("<p>Congrats!</p>");
   $("body").append("<p>FirstName: "+fNameInput+"</p>");
   $("body").append("<p>LastName: "+lNameInput+"</p>");
   $("body").append("<p>PhoneNumber: "+phoneNumberInput+"</p>");
   $("body").append("<p>Address: "+addressInput+"</p>");
-  $(this).('submit').submit();
-  // $("form").submit();
+  $("body").append("<a href="/contacts/new">Add Another Contact</a>");
+  $("body").append("<a href="/contacts">View all Contacts</a>");
+  $("body").append("<a href="/">Return to Homepage</a>");
+  $("body").append("<label for='confirmIT'>OK</label>");
+  $("body").append("<input type='button'>");
+  // $(this).('submit').submit();
+  $("form").submit();
   //Output
     // $("body").show();
     // $

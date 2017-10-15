@@ -10,7 +10,7 @@ namespace AddressBook.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      return View(Contacts.GetAll());
+      return View();
     }
     [HttpGet("/contacts")]
     public ActionResult Contact()
@@ -27,12 +27,7 @@ namespace AddressBook.Controllers
     public ActionResult AddContact()
     {
       Contacts contact = new Contacts(Request.Form["firstName"], Request.Form["lastName"], Request.Form["phoneNumber"], Request.Form["address"]);
-      return View("ConfirmAdd");
-    }
-    [HttpGet("/contacts/new/confirm")]
-    public ActionResult ConfirmAdd()
-    {
-        return View();
+      return View("ContactForm");
     }
     [HttpGet("/contacts/{id}")]
     public ActionResult ContactDetail(int id)
