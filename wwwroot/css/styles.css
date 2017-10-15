@@ -12,12 +12,10 @@ h3 {
 }
 #Header {
   font-weight: 600;
+  background-color: lightgray;
 }
 .footerDiv {
   font-size: 18px;
-}
-#Header {
-  background-color: cyan;
 }
 .listOut {
   font-size: 16px;

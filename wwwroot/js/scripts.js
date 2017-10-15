@@ -20,9 +20,9 @@ $(document).ready(function() {
   $("body").append("<p><em>Returning you to the New Contact Form...</em></p>");
   $("body").append("<br>");
   $("body").append("<br>");
-  $("body").append("<a href='/contacts/new'>Add Another Contact</a>");
-  $("body").append("<a href='/contacts'>View all Contacts</a>");
-  $("body").append("<a href='/'>Return to Homepage</a>");
+  $("body").append("<a href='/contacts/new'>Add Another Contact   </a>");
+  $("body").append("<a href='/contacts'>View all Contacts   </a>");
+  $("body").append("<a href='/'>Return to Homepage</a>   ");
   $("body").append("</div>");
   });
 });

@@ -1,13 +1,10 @@
 @{
   Layout = "_Layout";
 }
-<h1 id="allContacts">*Contacts List*</h1>
+<h1 id="allContacts">Contacts List</h1>
 <ul>
   @foreach (var contact in Model)
   {
     <li class="listOut"><a href='/contacts/@contact.GetId()'>@contact.GetLastName(), @contact.GetFirstName()</a></li>
   }
 </ul>
-<a href="/contacts/new">Add Another Contact</a>
-<a href="/contacts">View all Contacts</a>
-<a href="/">Return to Homepage</a>

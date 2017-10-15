@@ -11,6 +11,7 @@ namespace AddressBook.Models
     private string _address;
     private int _id;
     private static List<Contacts> _contactsList = new List<Contacts> {};
+    private int _sizeOfList = Contacts.Count;
 
     public Contacts (string lastName, string firstName, string phoneNumber, string address)
     {
@@ -20,6 +21,7 @@ namespace AddressBook.Models
       _address = address;
       _contactsList.Add(this);
       _id = _contactsList.Count;
+      _sizeOfList = sizeOfList;
     }
     public string GetLastName()
     {
@@ -36,6 +38,10 @@ namespace AddressBook.Models
     public string GetAddress()
     {
       return _address;
+    }
+    public string GetSizeOfList()
+    {
+      return _sizeOfList;
     }
 
     public void SetLastName(string newLastName)

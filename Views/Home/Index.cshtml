@@ -5,11 +5,11 @@
 <div class="container">
 
 <h1 id="allContacts">Contacts List</h1>
-<ul>
+
+  <ul>
   @foreach (var contact in Model)
   {
-    <li class="listOut"><a href='/contacts/@contact.GetId()'>@contact.GetLastName(), @contact.GetFirstName()</a></li>
+  <li class="listOut"><a href='/contacts/@contact.GetId()'>@contact.GetLastName(), @contact.GetFirstName()</a></li>
   }
-</ul>
-
-</div>
+  </ul>
+  </div>
