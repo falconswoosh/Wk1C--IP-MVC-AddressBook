@@ -3,7 +3,16 @@
 }
 
 <div class="container">
-<!-- <img src="/img/index-image.jpg" id="index-img"> -->
-<a href ='/contacts/new'>Add a New Contact</a>
-<a href ='contacts'>View all Contacts</a>
+
+<h1 id="allContacts">Contacts List</h1>
+<ul>
+  @foreach (var contact in Model)
+  {
+    <li><a href='/contacts/@contact.GetId()'>@contact.GetLastName(), @contact.GetFirstName()</a></li>
+  }
+</ul>
+
 </div>
+  <a href="/contacts/new">Add Another Contact</a>
+  <a href="/contacts">View all Contacts</a>
+  <a href="/contacts/clear">Clear All Contacts</a>
