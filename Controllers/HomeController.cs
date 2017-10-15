@@ -1,15 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using AddressBook.Models;
+using System;
 
 namespace AddressBook.Controllers
 {
-  public class HomeController : Controller
+  public class HomeController: Controller
   {
     [HttpGet("/")]
     public ActionResult Index()
     {
-        return View();
+      return View(Contacts.GetAll());
     }
     [HttpGet("/contacts")]
     public ActionResult Contact()
@@ -18,16 +19,20 @@ namespace AddressBook.Controllers
       return View(allContacts);
     }
     [HttpGet("/contacts/new")]
-    public ActionResult AddContactsForm()
+    public ActionResult ContactForm()
     {
         return View();
     }
-    [HttpPost("/contacts/new")]
-    public ActionResult ConfirmAdd()
+    [HttpPost("/contacts")]
+    public ActionResult AddContact()
     {
       Contacts contact = new Contacts(Request.Form["firstName"], Request.Form["lastName"], Request.Form["phoneNumber"], Request.Form["address"]);
       return View("ConfirmAdd");
-      // return View();
+    }
+    [HttpGet("/contacts/new/confirm")]
+    public ActionResult ConfirmAdd()
+    {
+        return View();
     }
     [HttpGet("/contacts/{id}")]
     public ActionResult ContactDetail(int id)

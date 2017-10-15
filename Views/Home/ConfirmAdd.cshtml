@@ -2,12 +2,17 @@
   Layout = "_Layout";
 }
 
-  <h1>@Model.GetLastName()</h1>
-  <h1>@Model.GetFirstName()</h1>
-  <h1>@Model.GetPhoneNumber()</h1>
-  <h1>@Model.GetAddress()</h1>
+<h1>Congratulations for Adding a New Contact</h1>
+<p id="confirmAdd">this is a line</p>
 
-<h1>Congratulations for creating a new Contact!</h1>
+<ul>
+  @foreach (var contact in Model)
+  {
+    <li><a href='/contacts/@contact.GetId()'>@contact.GetLastName(), @contact.GetFirstName()</a></li>
+  }
+</ul>
+
 
   <a href="/contacts/new">Add Another Contact</a>
   <a href="/contacts">View all Contacts</a>
+  <a href="/">Return to Homepage</a>

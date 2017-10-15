@@ -30,17 +30,16 @@ This website is our first project for C# course. This site is for creating and a
 | Provides a contact list that may store a person's name, phone number and address |  jane doe<br />(213) 123-4567<br />1234 Hummingbird Lane<br />SomeCity, SC 90009 | jane doe<br />(213) 123-4567<br />1234 Hummingbird Lane<br />SomeCity, SC 90009 |
 | Homepage is located at localhost:5000  | http://localhost | browser address bar displays "http://localhost:500" and the main contacts page displays |
 | The main contacts page will list all contacts that allow the user to click  a contact's name to go to a separate page to view its details | contact1<br />contact2<br />contact3| (displays the selected contact's details)|
-| The homepage should also contain a link to a page presenting the user with a form they can fill out to create a new Contact | 'Create a new Contact' (button) | (Presents the user with a form they my complete to add their new contact) |
+| The homepage should also contain a link to a page presenting the user with a form they can fill out to create a new Contact | 'Create a new Contact' (link) | (Presents the user with a form they my complete to add their new contact) |
 |  Once saving a new contact, the user will be taken to a different page at the URL /contact/new. This page will display a confirmation with the information they just entered | (redirected from after adding a new contact) | You created a contact!<br />jane doe<br />(213) 123-4567<br />1234 Hummingbird Lane<br />SomeCity, SC 90009
-| On the /contact/new page, have a link back to the homepage with the list of all saved contacts, including the new one they just made. | 'Return to Homepage' (button)| (if having clicked on the link, they are returned to the homepage displaying...)<br />contact1<br />contact2<br />contact3<br />new contact just added|
+| On the /contact/new page, have a link back to the homepage with the list of all saved contacts, including the new one they just made. | 'Return to Homepage' (link)| (if having clicked on the link, they are returned to the homepage displaying...)<br />contact1<br />contact2<br />contact3<br />new contact just added|
 | The homepage will also have a 'Clear Contact' button at the bottom of the list of all contacts. | 'Clear Contact List' (button) | All Contacts will be deleted, and the user will be taken to a confirmation page at /contacts/clear. The confirmation shall display "Address book cleared!"|
 | If having clicked 'Clear Contact' button, The user will have a link to return to the homepage. | 'Return to Homepage' (button)| If clicked, they are returned to the homepage.|
 
 
 ## Known Bugs
 
-* Gets to http://localhost:5000; yet once clicking on "Add new Contact", the message back from the browser is "./contacts" not found. Yet, if refreshing the page, it displays the form to add a new contact.
-* If entering the contact information and clicking "Save", it takes you to a blank page.
+* If entering the contact information and clicking "Save", it takes you to a confirmation page; yet fails to display. What fails is reference to "@Model..."
 * If running in Windows 10 and within Git Bash, the "dotnet build" and "dotnet run" commands fail indicating certain files are already running or unable to bind...
 * Solution is to do a netstat -ano | findstr 5000 and to taskkill the PID associated with port 5000. I am not confident that all related sub-processes are killed as well since this project at the current status experiences intermittent success and failure.
 
