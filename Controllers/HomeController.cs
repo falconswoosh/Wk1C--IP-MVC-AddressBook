@@ -27,6 +27,7 @@ namespace AddressBook.Controllers
     public ActionResult AddContact()
     {
       Contacts contact = new Contacts(Request.Form["firstName"], Request.Form["lastName"], Request.Form["phoneNumber"], Request.Form["address"]);
+      System.Threading.Thread.Sleep(10000);
       return View("ContactForm");
     }
     [HttpGet("/contacts/{id}")]

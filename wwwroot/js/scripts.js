@@ -1,28 +1,44 @@
-$(function() {
-  // $("form").submit(function() {
-  $("form").submit(function(event) {
-  event.preventDefault();
+$(document).ready(function() {
+  $("form").submit(function() {
+  // $("form").submit(function(event) {
+  // event.preventDefault();
   var fNameInput = $("input#firstName").val();
   var lNameInput = $("input#lastName").val();
   var phoneNumberInput = $("input#phoneNumber").val();
   var addressInput = $("input#address").val();
-  // document.body.innerHTML = '';
+
   // $("body").append("@{");
   // $("body").append("Layout = '_Layout';");
   // $("body").append("}");
-  $("div.container").slideUp();
+  // $("body").innerHTML = '';
+
+  // document.body.innerHTML = '';
+  $("div#addContact").fadeToggle();
+  $('form').unbind('submit').submit();
+  // setTimeout(3000);
   $("body").append("<p>Congrats!</p>");
   $("body").append("<p>FirstName: "+fNameInput+"</p>");
   $("body").append("<p>LastName: "+lNameInput+"</p>");
   $("body").append("<p>PhoneNumber: "+phoneNumberInput+"</p>");
   $("body").append("<p>Address: "+addressInput+"</p>");
-  $("body").append("<a href="/contacts/new">Add Another Contact</a>");
-  $("body").append("<a href="/contacts">View all Contacts</a>");
-  $("body").append("<a href="/">Return to Homepage</a>");
-  $("body").append("<label for='confirmIT'>OK</label>");
-  $("body").append("<input type='button'>");
+  $("body").append("<a href='/contacts/new'>Add Another Contact</a>");
+  $("body").append("<a href='/contacts'>View all Contacts</a>");
+  $("body").append("<a href='/'>Return to Homepage</a>");
+
+
+  // $('form').submit();
+
+// function wait(ms)
+// {
+// var d = new Date();
+// var d2 = null;
+// do { d2 = new Date(); }
+// while(d2-d < ms);
+// }
+// wait(4000);
+// .unbind().submit();
   // $(this).('submit').submit();
-  $("form").submit();
+  // $("form#addContact").submit();
   //Output
     // $("body").show();
     // $
