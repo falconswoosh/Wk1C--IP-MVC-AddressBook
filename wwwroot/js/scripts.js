@@ -21,6 +21,7 @@ $(document).ready(function() {
   $("body").append("<br>");
   $("body").append("<br>");
   $("body").append("<a href='/contacts/new'>Add Another Contact   </a>");
+  $("body").append("<a href='/contacts/clear'>Clear all Contacts   </a>");
   $("body").append("<a href='/contacts'>View all Contacts   </a>");
   $("body").append("<a href='/'>Return to Homepage</a>   ");
   $("body").append("</div>");

@@ -2,11 +2,7 @@
   Layout = "_Layout";
 }
 <h1 id="clearContacts">*Clear Contacts List*</h1>
-<input type=text id="warning"><span>WARNING: You are about to clear all your contacts. Are certain this is what you wish to do (Y/N)?"</span>
-
-@if ('#warning' != "N" ||'#warning' != "n"  ) {
-  Contacts.Clear();
-} Else {
-<p>Returning you to the Homepage...</p>
-  System.Threading.Thread.Sleep(3000);
-}
+<form action = "contacts/clear" method = "post">
+<p id="warning"><span><strong>WARNING</strong>: You are about to clear all your contacts</span>
+<button type = "submit" name="button">Clear All Contacts</button>
+</form>

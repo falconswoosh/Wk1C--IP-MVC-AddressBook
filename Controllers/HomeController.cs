@@ -29,6 +29,7 @@ namespace AddressBook.Controllers
     {
       Contacts contact = new Contacts(Request.Form["firstName"], Request.Form["lastName"], Request.Form["phoneNumber"], Request.Form["address"]);
       System.Threading.Thread.Sleep(12000);
+      newContact.Save();
       return View("ContactForm");
     }
     [HttpGet("/contacts/{id}")]
@@ -37,9 +38,10 @@ namespace AddressBook.Controllers
       Contacts contact = Contacts.Find(id);
       return View(contact);
     }
-    [HttpGet("/contacts/clear")]
+    [HttpPost("/contacts/clear")]
     public ActionResult ClearContacts()
     {
+      Contacts.ClearAll();
       return View();
     }
   }
