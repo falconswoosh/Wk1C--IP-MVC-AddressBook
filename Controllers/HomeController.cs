@@ -29,7 +29,7 @@ namespace AddressBook.Controllers
     {
       Contacts contact = new Contacts(Request.Form["firstName"], Request.Form["lastName"], Request.Form["phoneNumber"], Request.Form["address"]);
       System.Threading.Thread.Sleep(12000);
-      newContact.Save();
+      // newContact.Save();
       return View("ContactForm");
     }
     [HttpGet("/contacts/{id}")]

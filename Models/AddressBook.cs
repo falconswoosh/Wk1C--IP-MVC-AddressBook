@@ -68,7 +68,7 @@ namespace AddressBook.Models
     // }
     public static void ClearAll()
     {
-      _contactsList.Clear();
+      _contactsList.ClearAll();
     }
     public static Contacts Find(int searchId)
     {
