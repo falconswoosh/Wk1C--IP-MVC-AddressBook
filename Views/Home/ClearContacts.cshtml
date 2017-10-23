@@ -1,8 +1,11 @@
 @{
   Layout = "_Layout";
 }
-<h1 id="clearContacts">*Clear Contacts List*</h1>
-<form action = "contacts/clear" method = "post">
-<p id="warning"><span><strong>WARNING</strong>: You are about to clear all your contacts</span>
-<button type = "submit" name="button">Clear All Contacts</button>
+
+<h1 id="contactsListClear">*Clear Contacts List*</h1>
+
+<form action = "/contacts/clear" method = "post">
+<p id="warning"><span><strong>WARNING</strong>: You are about to clear all your contacts. Please confirm you wish to do this.</span></p>
+<br><br><br><br>
+<button type = "submit" class = "btn btn-danger" name="button">Confirm</button>
 </form>

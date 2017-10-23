@@ -3,13 +3,17 @@
 }
 
 <div class="container">
-
 <h1 id="allContacts">Contacts List</h1>
 
-  <ul>
-  @foreach (var contact in Model)
+@if (@Model.Count == 0)
   {
-  <li class="listOut"><a href='/contacts/@contact.GetId()'>@contact.GetLastName(), @contact.GetFirstName()</a></li>
+  <h3>No contacts have been added yet!</h3>
   }
+
+  <ul>
+@foreach (var contact in Model)
+{
+<li class="listOut"><a href='/contacts/@contact.GetId()'>@contact.GetLastName(), @contact.GetFirstName()</a></li>
+}
   </ul>
-  </div>
+</div>

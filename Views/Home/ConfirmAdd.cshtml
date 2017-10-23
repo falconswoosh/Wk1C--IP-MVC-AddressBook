@@ -3,14 +3,11 @@
 }
 
 <h1>Congratulations for Adding a New Contact</h1>
-<p id="confirmAdd">this is a line</p>
 
-<ul>
-  @foreach (var contact in Model)
-  {
-    <li><a href='/contacts/@contact.GetId()'>@contact.GetLastName(), @contact.GetFirstName()</a></li>
-  }
-</ul>
+<h3>First Name: @Model.GetFirstName()</h3>
+<h3>Last Name: @Model.GetLastName()</h3>
+<h3>Phone Number: @Model.GetPhoneNumber()</h3>
+<h3>Address: @Model.GetAddress()</h3>
 
 
   <a href="/contacts/new">Add Another Contact</a>
