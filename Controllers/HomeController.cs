@@ -40,7 +40,7 @@ namespace AddressBook.Controllers
     {
       Contacts contact = new Contacts(Request.Form["firstName"], Request.Form["lastName"], Request.Form["phoneNumber"], Request.Form["address"]);
       // System.Threading.Thread.Sleep(12000);
-      return View("ConfirmAdd");
+      return View("ConfirmAdd", allContacts);
     }
     [HttpGet("/contacts/{id}")]
     public ActionResult ContactDetail(int id)
@@ -54,7 +54,7 @@ namespace AddressBook.Controllers
     {
       List<Contacts> allContacts = Contacts.GetAll();
       Contacts.ClearAll();
-      return View();
+      return View("Index",allContacts);
     }
   }
 }
